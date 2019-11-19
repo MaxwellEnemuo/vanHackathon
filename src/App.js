@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./components/navBar";
+import LocationBar from "./components/locations";
+import RecipeReviewCard from "./components/jobCards";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Navbar />
+      <main role="main" className="container-fluid" style={{paddingTop: 20}}>
+        <div className="row">
+          <LocationBar />
+          <RecipeReviewCard />
+        </div>
+      </main>
+    </React.Fragment>
   );
 }
 
